@@ -1,0 +1,17 @@
+.app {
+  height: 100vh;
+  background: rgba(26, 26, 26, 1);
+}
+
+.header {
+  height: 200px;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+}
+
+.header img {
+  width: 126px;
+  height: 48px;
+  margin-top: 72px;
+}
