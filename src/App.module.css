@@ -1,10 +1,14 @@
 .app {
   height: 100vh;
   background: rgba(26, 26, 26, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
   height: 200px;
+  width: 100vw;
   background: #0d0d0d;
   display: flex;
   justify-content: center;
@@ -14,4 +18,99 @@
   width: 126px;
   height: 48px;
   margin-top: 72px;
+}
+
+.task_input {
+  display: flex;
+  height: 54px;
+  width: 736px;
+  gap: 8px;
+  margin-top: -28px;
+}
+
+.task_input input {
+  background: #262626;
+  border: 1px solid #0d0d0d;
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 16px;
+  width: 638px;
+  border-radius: 8px;
+  color: #808080;
+}
+
+.task_input input:focus {
+  outline: none;
+}
+
+.task_input button {
+  flex-grow: 1; /* occupies the max available space*/
+  background: #1e6f9f;
+  border-radius: 8px;
+  border: none;
+  color: #f2f2f2;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 1px;
+}
+
+.task_list_content {
+  width: 736px;
+  margin-top: 64px;
+}
+
+.tasks_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.created_tasks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.created_tasks p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #4ea8de;
+}
+
+.created_tasks_counter {
+  color: #d9d9d9;
+  background: #333333;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.completed_tasks {
+  display: flex;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.completed_tasks p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #8284fa;
+}
+
+.completed_tasks_counter {
+  color: #d9d9d9;
+  background: #333333;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.task_list {
+  margin-top: 1rem;
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+  height: 5rem;
+  /* Colocar os tamanhos corretos */
 }
