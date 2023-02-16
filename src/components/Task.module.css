@@ -26,7 +26,7 @@ button {
   all: unset;
 }
 
-.CheckboxRoot {
+.CheckboxRootNotChecked {
   background-color: transparent;
   width: 17.45px;
   height: 17.45px;
@@ -36,14 +36,33 @@ button {
   align-items: center;
   justify-content: center;
 }
-.CheckboxRoot:hover {
+
+.CheckboxRootNotChecked:hover {
   border: 3px solid #1e6f9f;
   background-color: rgba(30, 111, 159, 0.2);
 }
-.CheckboxRoot:focus {
-  box-shadow: 0 0 0 2px black;
+
+.CheckboxRoot {
+  background-color: #5e60ce;
+  border: 3px solid #5e60ce;
+
+  width: 17.45px;
+  height: 17.45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckboxRoot:hover {
+  background-color: #8284fa;
+  border: 3px solid #8284fa;
 }
 
 .CheckboxIndicator {
-  color: var(--violet11);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
