@@ -25,7 +25,7 @@ export function App() {
           </div>
           <div className={styles.completed_tasks}>
             <p>Tarefas Concluídas</p>
-            <div className={styles.completed_tasks_counter}>0</div>
+            <div className={styles.completed_tasks_counter}>2 de 5</div>
           </div>
         </div>
         <div className={styles.task_list}>

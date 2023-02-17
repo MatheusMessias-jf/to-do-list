@@ -5,12 +5,20 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
   display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15px;
 }
 
 .task p {
   color: #f2f2f2;
   font-weight: 400;
   font-size: 14px;
+  text-align: left;
+}
+
+.CheckedText {
+  text-decoration: line-through;
 }
 
 .trash {
@@ -19,6 +27,14 @@
   cursor: pointer;
   color: #808080;
   line-height: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.trash:hover {
+  color: rgba(226, 88, 88, 1);
+  border-radius: 4px;
+  background: #333333;
 }
 
 /* reset */

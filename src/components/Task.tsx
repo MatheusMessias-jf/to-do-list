@@ -12,23 +12,27 @@ export function Task() {
 
   return (
     <div className={styles.task}>
-      <Checkbox.Root
-        onCheckedChange={handleIsChecked}
-        className={
-          isChecked ? styles.CheckboxRoot : styles.CheckboxRootNotChecked
-        }
-        id="c1"
-      >
-        <Checkbox.Indicator className={styles.CheckboxIndicator}>
-          <CheckIcon />
-        </Checkbox.Indicator>
-      </Checkbox.Root>
-      <p>
+      <div className={styles.checkbox}>
+        <Checkbox.Root
+          onCheckedChange={handleIsChecked}
+          className={
+            isChecked ? styles.CheckboxRoot : styles.CheckboxRootNotChecked
+          }
+          id="c1"
+        >
+          <Checkbox.Indicator className={styles.CheckboxIndicator}>
+            <CheckIcon />
+          </Checkbox.Indicator>
+        </Checkbox.Root>
+      </div>
+
+      <p className={isChecked ? styles.CheckedText : styles.UncheckedText}>
         Integer urna interdum massa libero auctor neque turpis turpis semper.
         Duis vel sed fames integer
       </p>
+
       <button className={styles.trash} title="Deletar comentáro">
-        <Trash size={24} />
+        <Trash size={20} />
       </button>
     </div>
   );
