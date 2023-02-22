@@ -28,7 +28,11 @@
   margin-top: -1.75rem;
 }
 
-.task_input input {
+.task_input form {
+  display: flex;
+}
+
+.task_input textarea {
   background: #262626;
   border: 1px solid #0d0d0d;
   font-weight: 400;
@@ -37,17 +41,23 @@
   width: 39.875rem;
   border-radius: 8px;
   color: #808080;
+  resize: none;
+  line-height: 3;
 }
 
-.task_input input:focus {
+.task_input textarea::placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3;
+}
+
+.task_input textarea:focus {
   color: #f2f2f2;
-}
-
-.task_input input:focus {
   outline: none;
 }
 
-.task_input button {
+.task_input form button {
   flex-grow: 1; /* occupies the max available space*/
   background: #1e6f9f;
   border-radius: 8px;
@@ -58,8 +68,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
   gap: 0.5rem;
   margin: 0.0625rem;
+  margin-left: 0.4375rem;
 }
 
 .task_input button:hover {
