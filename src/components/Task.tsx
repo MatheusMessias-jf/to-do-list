@@ -4,21 +4,35 @@ import * as Checkbox from "@radix-ui/react-checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 
-export function Task() {
-  const [isChecked, setIsChecked] = useState(false);
-  const handleIsChecked = (checked: any) => {
-    setIsChecked(checked);
-  };
+interface Props {
+  taskContent: string;
+  isCompleted: boolean;
+}
 
+interface TaskProps {
+  task: Props;
+  handleCheckTask: (id: number) => void;
+  handleDeleteTask: (id: number) => void;
+  id: number;
+}
+
+export function Task({
+  task,
+  handleCheckTask,
+  id,
+  handleDeleteTask,
+}: TaskProps) {
   return (
     <div className={styles.task}>
       <div className={styles.checkbox}>
         <Checkbox.Root
-          onCheckedChange={handleIsChecked}
+          checked={task.isCompleted}
+          onCheckedChange={() => handleCheckTask(id)}
           className={
-            isChecked ? styles.CheckboxRoot : styles.CheckboxRootNotChecked
+            task.isCompleted
+              ? styles.CheckboxRoot
+              : styles.CheckboxRootNotChecked
           }
-          id="c1"
         >
           <Checkbox.Indicator className={styles.CheckboxIndicator}>
             <CheckIcon />
@@ -26,12 +40,17 @@ export function Task() {
         </Checkbox.Root>
       </div>
 
-      <p className={isChecked ? styles.CheckedText : styles.UncheckedText}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer
+      <p
+        className={task.isCompleted ? styles.CheckedText : styles.UncheckedText}
+      >
+        {task.taskContent}
       </p>
 
-      <button className={styles.trash} title="Deletar comentáro">
+      <button
+        className={styles.trash}
+        onClick={() => handleDeleteTask(id)}
+        title="Deletar comentáro"
+      >
         <Trash size={20} />
       </button>
     </div>
